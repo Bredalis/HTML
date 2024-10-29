@@ -1,48 +1,64 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Formularios</title>
-</head>	
+</head>
 <body>
-
 	<form>
-
 		<!-- Diferentes inputs -->
-		<input type="text" value="Escribe tu nombre"><br/>
-		<input type="text" placeholder="Escribe tu nombre" size="10"><br/>
+		<input type="text" value="Escribe tu nombre"><br>
+		<input type="text" placeholder="Escribe tu nombre" size="10"><br>
 
 		<label for="Nombre">Ingresa tu nombre:</label>
-		<input type="text" placeholder="Escribe tu nombre" maxlength="2" name="Nombre" id="Nombre">
+		<input type="text" placeholder="Escribe tu nombre" maxlength="2" name="Nombre" id="Nombre" required>
+
+		<!-- Email -->
+		<label for="email">Correo Electrónico:</label>
+		<input type="email" id="email" placeholder="Escribe tu correo electrónico"><br>
 
 		<!-- Contraseña -->
-		<input type="password"><br/>
-
-		<input type="email"><br/>
+		<label for="contraseña">Contraseña:</label>
+		<input type="password" id="contraseña" placeholder="Escribe tu contraseña"><br>
 
 		<!-- Botones -->
-		<input type="checkbox">Hombre
-		<input type="checkbox">Mujer
+		<label>
+			<input type="checkbox" name="genero" value="Hombre"> Hombre
+		</label>
+		<label>
+			<input type="checkbox" name="genero" value="Mujer"> Mujer
+		</label>
+		<br>		
 
-		<br/>
-		<input type="radio">Hombre
-		<input type="radio">Mujer
+		<label>
+			<input type="radio" name="generoRadio" value="Hombre"> Hombre
+		</label>
+		<label>
+			<input type="radio" name="generoRadio" value="Mujer"> Mujer
+		</label>
 
-		<br/>
+		<br>
 		<input type="button" value="Enviar">
-		<input type="submit">
-		<br/>
+		<input type="submit" value="Enviar">
+		<br>
 
-		<!-- Etiqueta de seleccion -->
-		<select>
-			<option value="Mexico">Mexico</option>
+		<!-- Etiqueta de selección -->
+		<label for="pais">Selecciona un país:</label>
+		<select id="pais" name="pais">
+			<option value="Mexico">México</option>
 			<option value="Colombia">Colombia</option>
 		</select>
-		<br/>
+		<br>
 
 		<!-- Colores -->
-		<input type="color">
-		<input type="range">
+		<label for="color">Selecciona un color:</label>
+		<input type="color" id="color">
+		<br>
+		
+		<label for="rango">Selecciona un rango:</label>
+		<input type="range" id="rango" min="0" max="100">
+		<br>
 	</form>
 </body>
 </html>
